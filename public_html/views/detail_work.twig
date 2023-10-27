@@ -1,0 +1,22 @@
+{% extends "layout_detail.twig" %}
+
+{% block content %}
+
+<div class="pf_container detail_work">
+  <h1 class="tac">{{page.name}}</h1>
+  <div class="detail_work__text detail_work__tags tac">{{page.body | raw}}</div>
+  <div class="">
+    {% if page.prev_link %}
+      <a href="{{page.prev_link}}" class='detail_work__prev pull-left'></a>
+    {% endif %}
+    {% if page.next_link %}
+      <a href="{{page.next_link}}" class='detail_work__next pull-right'></a>
+    {% endif %}
+  </div>
+  <div class="detail_work__img">
+    <img src="/{{page.detail_picture}}" alt="">
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,122 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<section id="top">
+  <div class="pf_container">
+    <h1 class="h">
+       Николай<br/>Кузнецов.<br/>
+      <div>{ <span><span id="prof"><span class="typed-cursor">|</span></span><span class="grey">- </span>разработчик </span>}</div>
+    </h1>
+    <div class="main_text">
+      <p>5 лет опыта в веб-разработке. <br>
+        Бэкенд: php/laravel, nodejs/express<br>
+        Фронтенд: es6, webpack, gulp, для SPA - vue.js</p>
+    </div>
+  </div>
+</section>
+
+<section class="b_portfolio" id="portfolio">
+  <div class="pf_container">
+    <h1 class="h pull-right"><span class="grey">/ </span>Последние работы.</h1>
+    <div class="b_portfolio__content">
+      <div class="b_portfolio__items">
+        {% for page in pages %}
+          <div class="b_portfolio__item"><a href="/work/{{page.id}}"><img src="{{page.preview_picture}}" alt=""/></a>
+            <div class="b_portfolio__item__name"><a href="/work/{{page.id}}">{{page.name}}</a></div>
+          </div>
+        {% endfor %}
+      </div>
+      <!-- <div class="b_portfolio__items">
+        <div class="b_portfolio__item"><a href="#work_"><img src="img/works/zav_small.png" alt=""/></a>
+          <div class="b_portfolio__item__name"><a href="http://zavjaliha.com" target="_blank">zavjaliha.com</a></div>
+        </div>
+        <div class="b_portfolio__item"><a href=""><img src="img/works/kurbalov_small.png" alt=""/></a>
+          <div class="b_portfolio__item__name"><a href="http://kurbalov.ru" target="_blank">kurbalov.ru</a></div>
+        </div>
+        <div class="b_portfolio__item"><a href=""><img src="img/works/karkas_small.png" alt=""/></a>
+          <div class="b_portfolio__item__name"><a href="http://zavodkarkas.ru" target="_blank">zavodkarkas.ru</a></div>
+        </div>
+        <div class="b_portfolio__item"><a href=""><img src="img/works/promaster_small.png" alt=""/></a>
+          <div class="b_portfolio__item__name"><a href="http://промастер.рф" target="_blank">промастер.рф</a></div>
+        </div>
+        <div class="b_portfolio__item"><a href=""><img src="img/works/iceberg_small.png" alt=""/></a>
+          <div class="b_portfolio__item__name"><a href="http://iceberg74.ru" target="_blank">iceberg74.ru</a></div>
+        </div>
+        <div class="b_portfolio__item"><a href=""><img src="img/works/korol_small.png" alt=""/></a>
+          <div class="b_portfolio__item__name"><a href="http://корольплаза.рф" target="_blank">корольплаза.рф</a></div>
+        </div>
+        <div class="b_portfolio__item"><a href=""><img src="img/works/sovetnik_small.png" alt=""/></a>
+          <div class="b_portfolio__item__name"><a href="http://sovetnikchel.ru" target="_blank">sovetnikchel.ru</a></div>
+        </div>
+        <div class="b_portfolio__item"><a href=""><img src="img/works/easyauto_small.png" alt=""/></a>
+          <div class="b_portfolio__item__name"><a href="http://easyauto23.ru/" target="_blank">easyauto23.ru</a></div>
+        </div>
+        <div class="b_portfolio__item"><a href=""><img src="img/works/bat2_small.png" alt=""/></a>
+          <div class="b_portfolio__item__name"><a href="http://bat-2.com" target="_blank">bat-2.com</a></div>
+        </div>
+        <div class="b_portfolio__item"><a href=""><img src="img/works/popilov_small.png" alt=""/></a>
+          <div class="b_portfolio__item__name"><a href="http://popilov.ru" target="_blank">popilov.ru</a></div>
+        </div>
+        <div class="b_portfolio__item"><a href=""><img src="img/works/r1auto_small.png" alt=""/></a>
+          <div class="b_portfolio__item__name"><a href="http://r1auto.ru" target="_blank">r1auto.ru</a></div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<section id="tech">
+  <div class="pf_container">
+    <h1 class="h"> <span class="grey">/ </span>Технологии.</h1>
+    <div class="tech__list row around-xs">
+      <div class="tech__item col-xs"><img src="img/tech/php.png" title="php"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/js.png" title="JavaScript"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/mysql.png" title="MySQL"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/css.png" title="CSS"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/stylus.svg" title="Stylus"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/bootstrap.png" title="Bootstrap"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/nodejs.png" title="NodeJS"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/bitrix.png" title="1с-bitrix"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/wordpress.png" title="Wordpress"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/vuejs.jpg" title="VueJS"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/gulp.png" title="Gulp"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/pug.png" title="Pug"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/npm.png" title="Npm"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/express_js.png" title="Express"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/atom.png" title="Atom"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/phpstorm.png" title="PhpStorm"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/bower.png" title="Bower"/></div>
+      <div class="tech__item col-xs"><img src="img/tech/git.png" title="Git"/></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="pf_container">
+    <h1 class="h">Контакты</h1>
+    <div class="cf"></div>
+    <!-- <div class="contact_form">
+      <form action="#" method="POST" data-validate="" data-url="/form.php">
+        <div class="contact_form__input">
+          <input id="form_name" type="text" name="NAME" autocomplete="off"/>
+          <label for="form_name">Имя / Организация</label>
+        </div>
+        <div class="contact_form__input">
+          <input id="form_email" type="text" name="EMAIL" data-rules="required, email" autocomplete="off"/>
+          <label for="form_email">E-mail</label>
+        </div>
+        <div class="contact_form__input">
+          <textarea id="form_message" type="text" name="MESSAGE" autocomplete="off"></textarea>
+          <label for="form_message">Сообщение</label>
+        </div>
+        <div class="tac">
+          <button class="btn btn--small" type="submit">Отправить </button>
+        </div>
+      </form>
+    </div> -->
+    <div class="contact_soc"><a href="https://vk.com/id4303925" target="_blank"> <i class="fa fa-vk"></i></a><a href="skype:key_altos2"><i class="fa fa-skype"></i></a></div>
+  </div>
+</section>
+
+{% endblock %}
